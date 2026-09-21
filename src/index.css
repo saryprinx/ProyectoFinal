@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --rojo: #DA291C;
+  --rojo-oscuro: #A8180D;
+  --amarillo: #FFC72C;
+  --amarillo-claro: #FFE28A;
+  --crema: #FFF8ED;
+  --marron: #2B1B0E;
+  --marron-suave: #5A3E24;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--crema);
+  color: var(--marron);
+  overflow-x: hidden;
+}
+
+/* Ensure sections have scroll margin for fixed navbar */
+section, footer {
+  scroll-margin-top: 80px;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.35; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.15); }
+}
+
+.animate-pulse-line {
+  animation: pulseGlow 1.8s ease-in-out infinite;
+}
+
+@keyframes floatHero {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-14px); }
+}
+
+.animate-float-arches {
+  animation: floatHero 6s ease-in-out infinite;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pop {
+  animation: popIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom scrollbar for mobile frame */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(90, 62, 36, 0.2);
+  border-radius: 4px;
+}

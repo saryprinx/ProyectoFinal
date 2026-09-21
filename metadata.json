@@ -1,0 +1,6 @@
+{
+  "name": "Arcos Dorados",
+  "description": "Prototipo interactivo con menú digital, ruleta de premios, simulador de pedidos móviles y asistente virtual.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
